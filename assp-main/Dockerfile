@@ -1,6 +1,6 @@
 # Dockerfile
 
-FROM silvenga/assp-base:14.04
+FROM silvenga/assp-base
 MAINTAINER Mark Lopez (Silvenga) <m@silvenga.com>
 
 # Init
