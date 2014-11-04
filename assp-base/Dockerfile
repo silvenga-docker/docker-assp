@@ -30,17 +30,5 @@ RUN cpanm IO::Compress::Base IO::Compress::Gzip IO::Socket::SSL IO::Socket::INET
 RUN cpanm IO::Compress::Bzip2 IO::Compress::RawDeflate IO::Compress::Zip IO::Compress::Deflate IO::Wrap 
 RUN cpanm DBD::LDAP DBD::PgPP DBD::Sprite DBD::File DBD::Log DBD::mysql DBD::CSV DBD::Template Sys::MemInfo 
 
-# Init
-ADD build/assp /etc/init.d/
-RUN chmod +x /etc/init.d/assp
-ADD build/start.sh /
-
-# Settings
-ADD build/my.cnf /etc/mysql/
-ADD build/debian.cnf /etc/mysql/
-
 # Clean up
 RUN apt-get clean && rm -rf /root/.cpan/* /var/lib/apt/lists/* /tmp/* /var/tmp/*
-
-# Entry
-CMD /bin/bash /start.sh 

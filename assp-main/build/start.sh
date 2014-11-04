@@ -31,6 +31,8 @@ if [ ! -d /var/lib/mysql/mysql ]; then
     mysqladmin -uroot -proot shutdown
 fi
 
+chown -R mysql.mysql /var/lib/mysql
+
 service mysql start
 service assp start
 

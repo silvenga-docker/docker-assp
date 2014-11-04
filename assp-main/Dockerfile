@@ -12,8 +12,5 @@ ADD build/start.sh /
 ADD build/my.cnf /etc/mysql/
 ADD build/debian.cnf /etc/mysql/
 
-# Clean up
-RUN apt-get clean && rm -rf /root/.cpan/* /var/lib/apt/lists/* /tmp/* /var/tmp/*
-
 # Entry
 CMD /bin/bash /start.sh 
