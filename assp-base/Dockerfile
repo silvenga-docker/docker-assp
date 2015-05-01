@@ -14,7 +14,7 @@ RUN apt-get update \
 		libssl-dev \
 		libdb-dev \
 		curl \
-		software-properties-common \
+		software-properties-common 
 
 # Install MySQL
 RUN apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xcbcb082a1bb943db \
